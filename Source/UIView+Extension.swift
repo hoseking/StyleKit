@@ -20,7 +20,7 @@ public extension UIView {
     }
 
     internal func StyleKit_awakeFromNib() {
-        if respondsToSelector(Selector("StyleKit_awakeFromNib")) {
+        if responds(to: #selector(UIView.StyleKit_awakeFromNib)) {
             StyleKit_awakeFromNib()
             applyStyles()
         }

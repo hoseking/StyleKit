@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003980001BCEC8FB0093B945 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00397FFB1BCEC8FB0093B945 /* NSObject+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		003980001BCEC8FB0093B945 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00397FFB1BCEC8FB0093B945 /* NSObject+Extension.swift */; };
 		003980011BCEC8FB0093B945 /* StyleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 00397FFC1BCEC8FB0093B945 /* StyleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		003980021BCEC8FB0093B945 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00397FFD1BCEC8FB0093B945 /* StyleKit.swift */; settings = {ASSET_TAGS = (); }; };
-		003980031BCEC8FB0093B945 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00397FFE1BCEC8FB0093B945 /* UIView+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		003980021BCEC8FB0093B945 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00397FFD1BCEC8FB0093B945 /* StyleKit.swift */; };
+		003980031BCEC8FB0093B945 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00397FFE1BCEC8FB0093B945 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +104,7 @@
 				TargetAttributes = {
 					00397FED1BCEC8DE0093B945 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -250,6 +251,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.venturemedia.StyleKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -266,6 +268,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.venturemedia.StyleKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -288,6 +291,7 @@
 				00397FF81BCEC8DE0093B945 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

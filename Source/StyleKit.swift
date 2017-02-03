@@ -10,25 +10,25 @@ public protocol StyleHandler {
 
     var name: String { get }
 
-    func apply(view: UIView)
+    func apply(_ view: UIView)
 
 }
 
-public class StyleKit: NSObject {
+open class StyleKit: NSObject {
 
-    private static let sharedInstance = StyleKit()
+    fileprivate static let sharedInstance = StyleKit()
 
-    private var handlers = [StyleHandler]()
+    fileprivate var handlers = [StyleHandler]()
 
-    public class func configure(handlers: [StyleHandler]) {
+    open class func configure(_ handlers: [StyleHandler]) {
         UIView.swizzleMethodSelector("awakeFromNib", withSelector: "StyleKit_awakeFromNib", forClass: UIView.classForCoder())
         for handler in handlers {
             sharedInstance.handlers.append(handler)
         }
     }
 
-    public class func applyStyle(styleClassNames: String, toView: UIView) {
-        let names = styleClassNames.componentsSeparatedByString(";")
+    open class func applyStyle(_ styleClassNames: String, toView: UIView) {
+        let names = styleClassNames.components(separatedBy: ";")
         for name in names {
             var handlerFound = false
             for handler in sharedInstance.handlers {
