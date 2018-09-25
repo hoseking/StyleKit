@@ -9,9 +9,9 @@ import Foundation
 extension NSObject {
 
     class func swizzleMethodSelector(_ origSelector: String, withSelector: String, forClass: AnyClass) {
-        let originalMethod = class_getInstanceMethod(forClass, Selector(origSelector))
-        let swizzledMethod = class_getInstanceMethod(forClass, Selector(withSelector))
-        method_exchangeImplementations(originalMethod, swizzledMethod)
+        if let originalMethod = class_getInstanceMethod(forClass, Selector(origSelector)), let swizzledMethod = class_getInstanceMethod(forClass, Selector(withSelector)) {
+            method_exchangeImplementations(originalMethod, swizzledMethod)
+        }
     }
     
 }
